@@ -26,9 +26,9 @@ public class BPItestApplication {
 	@Bean
 	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
 		return args -> {
-			BPI bpi = restTemplate.getForObject(
-					"https://api.coindesk.com/v1/bpi/currentprice.json", BPI.class);
-			log.info(bpi.toString());
+			Test test = restTemplate.getForObject(
+					"https://api.coindesk.com/v1/bpi/currentprice.json", Test.class);
+			log.info(test.toString());
 		};
 	}
 
